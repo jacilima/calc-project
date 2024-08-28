@@ -1,0 +1,19 @@
+/* Estilo para o link ativo no menu */
+.menu a.active {
+    background: #fad100; /* Define a cor de fundo amarela para o item ativo no menu */
+}
+
+/* Estilos para a seção principal */
+section {
+    background: white; /* Define o fundo da seção como branco */
+    border: 1px solid black; /* Adiciona uma borda preta sólida de 1 pixel ao redor da seção */
+    width: 700px; /* Define a largura da seção como 700 pixels */
+    margin: 80px auto; /* Adiciona uma margem superior de 80 pixels e centraliza horizontalmente com margens automáticas */
+    padding: 20px; /* Adiciona um padding de 20 pixels dentro da seção */
+    line-height: 20px; /* Define a altura da linha como 20 pixels, controlando o espaçamento entre linhas de texto */
+    border-radius: 10px; /* Arredonda os cantos da seção com um raio de 10 pixels */
+    box-shadow: 10px 10px 20px 6px #999999; /* Adiciona uma sombra externa com deslocamento de 10 pixels horizontal e vertical, desfoque de 20 pixels, expansão de 6 pixels e cor cinza claro */
+    /* Comentários removidos:
+    inset: coloca a sombra para dentro (não está presente neste código, mas é uma opção para sombras internas)
+    text-shadow: 5px 5px 4px #999999; /* sombra no texto (comentada, mas adicionaria uma sombra ao texto dentro da seção) */
+}

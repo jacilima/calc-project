@@ -1,0 +1,160 @@
+/* Declaração da fonte personalizada */
+@font-face {
+    font-family: 'Segoe'; /* Nome da fonte */
+    font-style: normal; /* Estilo da fonte (normal) */
+    src: url(../fonts/segoeui.woff); /* Caminho para o arquivo da fonte (formato WOFF) */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background: url(../img/bg-mercado-2.jpg); /* Define uma imagem de fundo para o corpo */
+    /* ../ indica que a imagem está em um diretório acima */
+    /* Outras opções de repetição da imagem, como repeat, repeat-x, repeat-y, não são usadas aqui */
+    margin: 0; /* Remove a margem padrão ao redor do corpo */
+    padding: 0; /* Remove o padding padrão ao redor do corpo */
+    font-family: 'Segoe', 'Arial'; /* Define a fonte principal como 'Segoe' e fallback para 'Arial' */
+    cursor: url(../cur/paw.cur), auto; /* Define um cursor personalizado para o ponteiro (arquivo CUR) */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    /* border: 2px red solid; /* Bordas vermelhas eram usadas para marcação, removidas */
+    /* height: 130px; /* Altura foi removida porque saía do cabeçalho */
+    min-height: 130px; /* Define a altura mínima do cabeçalho como 130 pixels */
+    background: rgba(0, 0, 0, 0.8); /* Define o fundo do cabeçalho com uma cor preta semi-transparente */
+}
+
+/* Estilos para o container no cabeçalho */
+.container {
+    /* border: 1px solid yellow; /* Borda amarela era usada para marcação, removida */
+    width: 996px; /* Define a largura do container como 996 pixels */
+    margin: 0 auto; /* Centraliza horizontalmente o container com margem automática */
+    padding-top: 10px; /* Adiciona padding superior de 10 pixels */
+}
+
+/* Estilos para imagens e títulos dentro do container */
+.container img,
+.container h1 {
+    float: left; /* Faz as imagens e títulos flutuarem à esquerda */
+}
+
+/* Estilos específicos para o título (h1) dentro do container */
+.container h1 {
+    color: white; /* Define a cor do texto do título como branca */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-size: 44px; /* Define o tamanho da fonte do título como 44 pixels */
+    margin-left: 20px; /* Adiciona uma margem esquerda de 20 pixels */
+    
+    /* Animação de efeito neon para o título */
+    animation-name: efeito_neon; /* Nome da animação */
+    animation-duration: 2s; /* Duração da animação de 2 segundos */
+    animation-iteration-count: infinite; /* Repetição infinita da animação */
+    animation-direction: alternate; /* Alterna entre os estados inicial e final da animação */
+    animation-timing-function: ease; /* Velocidade da animação com aceleração e desaceleração suave */
+}
+
+/* Estilos para o menu do site */
+.menu {
+    clear: both; /* Limpa flutuações anteriores para garantir que o container englobe os elementos flutuantes */
+}
+
+/* Estilos para links dentro do menu */
+.menu a {
+    color: white; /* Define a cor do texto dos links como branca */
+    font-weight: bold; /* Define o texto dos links como negrito */
+    width: 321px; /* Define a largura dos links como 321 pixels */
+    display: inline-block; /* Faz com que os links se comportem como blocos em linha */
+    text-align: center; /* Centraliza o texto dentro dos links */
+    padding: 4px; /* Adiciona padding de 4 pixels ao redor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    border-radius: 5px 5px 0 0; /* Arredonda os cantos superiores dos links */
+    transition: background 1s; /* Adiciona uma transição suave de 1 segundo para a cor de fundo */
+}
+
+/* Estilos para o primeiro link do menu */
+.menu a:first-child {
+    border-bottom: 4px solid #fad100; /* Adiciona uma borda inferior amarela ao primeiro link */
+}
+
+/* Estilos para o primeiro link do menu ao passar o mouse */
+.menu a:first-child:hover {
+    background: #fad100; /* Altera a cor de fundo para amarela ao passar o mouse */
+}
+
+/* Estilos para o segundo link do menu */
+.menu a:nth-child(2) {
+    border-bottom: 4px solid #4a8506; /* Adiciona uma borda inferior verde ao segundo link */
+}
+
+/* Estilos para o segundo link do menu ao passar o mouse */
+.menu a:nth-child(2):hover {
+    background: #4a8506; /* Altera a cor de fundo para verde ao passar o mouse */
+}
+
+/* Estilos para o último link do menu */
+.menu a:last-child {
+    border-bottom: 4px solid #0066cc; /* Adiciona uma borda inferior azul ao último link */
+}
+
+/* Estilos para o último link do menu ao passar o mouse */
+.menu a:last-child:hover {
+    background: #0066cc; /* Altera a cor de fundo para azul ao passar o mouse */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background: rgba(0, 0, 0, 0.8); /* Define o fundo do rodapé com uma cor preta semi-transparente */
+    padding: 5px; /* Adiciona padding de 5 pixels ao redor do conteúdo do rodapé */
+    color: white; /* Define a cor do texto do rodapé como branca */
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+    font-size: 18px; /* Define o tamanho da fonte do texto do rodapé como 18 pixels */
+    
+    /* Estilos para fixar o rodapé na parte inferior da página */
+    position: fixed; /* Define o rodapé como fixo na tela */
+    bottom: 0; /* Alinha o rodapé na parte inferior da tela */
+    width: 100%; /* Define a largura do rodapé como 100% da largura da tela */
+}
+
+/* Animação de efeito neon */
+@keyframes efeito_neon {
+    0% {
+        text-shadow: 0 0 5px #7bacff, /* Sombra do texto com cor azul clara e deslocamento */
+                     0 0 10px #7bacff,
+                     0 0 20px #7bacff,
+                     0 0 40px #7bacff,
+                     0 0 80px #7bacff,
+                     0 0 90px #7bacff,
+                     0 0 100px #7bacff,
+                     0 0 150px #7bacff;
+    }
+    50% {
+        text-shadow: 0 0 5px #7bffce, /* Sombra do texto com cor verde clara e deslocamento */
+                     0 0 10px #7bffce,
+                     0 0 20px #7bffce,
+                     0 0 40px #7bffce,
+                     0 0 80px #7bffce,
+                     0 0 90px #7bffce,
+                     0 0 100px #7bffce,
+                     0 0 150px #7bffce;
+    }
+    75% {
+        text-shadow: 0 0 5px #ff7bac, /* Sombra do texto com cor rosa clara e deslocamento */
+                     0 0 10px #ff7bac,
+                     0 0 20px #ff7bac,
+                     0 0 40px #ff7bac,
+                     0 0 80px #ff7bac,
+                     0 0 90px #ff7bac,
+                     0 0 100px #ff7bac,
+                     0 0 150px #ff7bac;
+    }
+    100% {
+        text-shadow: 0 0 5px #7bacff, /* Retorna à cor azul clara original da sombra */
+                     0 0 10px #7bacff,
+                     0 0 20px #7bacff,
+                     0 0 40px #7bacff,
+                     0 0 80px #7bacff,
+                     0 0 90px #7bacff,
+                     0 0 100px #7bacff,
+                     0 0 150px #7bacff;
+    }
+}

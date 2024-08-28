@@ -1,0 +1,97 @@
+<!DOCTYPE html> <!-- Declara o tipo de documento HTML5. Garante que o navegador renderize a página no modo mais moderno e correto. -->
+<html lang="pt"> <!-- Define o idioma da página como português. Isso ajuda na acessibilidade e SEO. -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres da página como UTF-8, garantindo que caracteres especiais sejam exibidos corretamente. -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Instrução para o Internet Explorer renderizar a página no modo de compatibilidade mais recente. -->
+    <title>Calculadora de Mercado</title> <!-- Define o título da página, que aparece na aba do navegador. -->
+    <link rel="stylesheet" href="css/mercado.css"> <!-- Link para o arquivo de estilo CSS principal, que estiliza a página como um todo. -->
+    <link rel="stylesheet" href="css/calculadora.css"> <!-- Link para o arquivo de estilo CSS específico da calculadora, que pode conter estilos adicionais ou sobrepostos. -->
+</head>
+<body>
+<header>
+    <div class="container"> <!-- Container para agrupar e organizar os elementos do cabeçalho. -->
+        <img src="img/logo-mercado-2.png" alt="Logo Mercado"> <!-- Imagem do logo da loja, com um texto alternativo para acessibilidade. -->
+        <br><br><h1>Calculadora de Mercado</h1> <!-- Título principal da página. -->
+        <nav class="menu"> <!-- Menu de navegação com links para diferentes páginas do site. -->
+            <a href="index.html">HOME</a> <!-- Link para a página inicial. -->
+            <a class="active" href="calculadora.html">CALCULADORA</a> <!-- Link para a página da calculadora, com a classe 'active' indicando que é a página atual. -->
+            <a href="comentarios.html">FEEDBACKS</a> <!-- Link para a página de feedbacks. -->
+        </nav>
+    </div>
+</header>
+
+<!-- INÍCIO CONTEÚDO DO SITE -->
+
+<section> <!-- Seção para agrupar o conteúdo principal da página. -->
+    <div class="miniaturas"> <!-- Contêiner para exibir miniaturas dos produtos. -->
+        <img src="img/mini/graos.jpg" alt="Grãos" onclick="trocaDog(this.src, this.alt)"> <!-- Imagem de miniatura para Grãos com uma função onclick para troca de imagem. -->
+        <img src="img/mini/leite.jpg" alt="Laticínios" onclick="trocaDog(this.src, this.alt)"> <!-- Imagem de miniatura para Laticínios com uma função onclick para troca de imagem. -->
+        <img src="img/mini/carnes.jpg" alt="Carnes" onclick="trocaDog(this.src, this.alt)"> <!-- Imagem de miniatura para Carnes com uma função onclick para troca de imagem. -->
+        <img src="img/mini/frutas.jpg" alt="Frutas" onclick="trocaDog(this.src, this.alt)"> <!-- Imagem de miniatura para Frutas com uma função onclick para troca de imagem. -->
+        <img src="img/mini/limpeza.jpg" alt="Limpeza" onclick="trocaDog(this.src, this.alt)"> <!-- Imagem de miniatura para Limpeza com uma função onclick para troca de imagem. -->
+    </div>
+    
+    <h1>Calculadora de Mercado</h1> <!-- Título da seção, repetido aqui para reforçar o contexto da página. -->
+    
+    <form id="itemForm"> <!-- Formulário para adicionar itens à lista com um ID único para referência no JavaScript. -->
+        <label for="descricao">Descrição:</label> <!-- Rótulo para o campo de entrada de descrição. -->
+        <input type="text" id="descricao" required> <!-- Campo de entrada de texto para a descrição do item, marcado como obrigatório. -->
+        <span class="error" id="descricaoError">Descrição é obrigatória.</span> <!-- Mensagem de erro exibida se a descrição não for fornecida. -->
+        
+        <label for="categoria">Categoria:</label> <!-- Rótulo para o campo de seleção de categoria. -->
+        <select id="categoria" required> <!-- Menu suspenso para selecionar a categoria do item, marcado como obrigatório. -->
+            <option value="">Selecione uma categoria</option> <!-- Opção padrão solicitando ao usuário que selecione uma categoria. -->
+            <option value="Grãos e Cereais">Grãos e Cereais</option> <!-- Opção para Grãos e Cereais. -->
+            <option value="Massas e Molhos">Massas e Molhos</option> <!-- Opção para Massas e Molhos. -->
+            <option value="Bolachas e Biscoitos">Bolachas e Biscoitos</option> <!-- Opção para Bolachas e Biscoitos. -->
+            <option value="Carnes e Derivados">Carnes e Derivados</option> <!-- Opção para Carnes e Derivados. -->
+            <option value="Limpeza e Higiene">Limpeza e Higiene</option> <!-- Opção para Limpeza e Higiene. -->
+            <option value="Laticínios e Iogurtes">Laticínios e Iogurtes</option> <!-- Opção para Laticínios e Iogurtes. -->
+            <option value="Frutas e Verduras">Frutas e Verduras</option> <!-- Opção para Frutas e Verduras. -->
+            <option value="Bebidas">Bebidas</option> <!-- Opção para Bebidas. -->
+        </select>
+        <span class="error" id="categoriaError">Categoria é obrigatória.</span> <!-- Mensagem de erro exibida se a categoria não for selecionada. -->
+        
+        <label for="valor">Valor:</label> <!-- Rótulo para o campo de entrada de valor. -->
+        <input type="number" id="valor" step="0.01" required> <!-- Campo de entrada numérica para o valor do item, com precisão de centavos, marcado como obrigatório. -->
+        <span class="error" id="valorError">Valor é obrigatório e deve ser um número.</span> <!-- Mensagem de erro exibida se o valor não for fornecido ou não for um número. -->
+        
+        <label for="quantidade">Quantidade/Peso:</label> <!-- Rótulo para o campo de entrada de quantidade ou peso. -->
+        <input type="number" id="quantidade" step="0.01" required> <!-- Campo de entrada numérica para quantidade ou peso do item, com precisão de centavos, marcado como obrigatório. -->
+        <span class="error" id="quantidadeError">Quantidade/Peso é obrigatória e deve ser um número.</span> <!-- Mensagem de erro exibida se a quantidade ou peso não for fornecida ou não for um número. -->
+        
+        <button type="button" onclick="adicionarItem()">Adicionar</button> <!-- Botão para adicionar o item à lista, com uma função JavaScript associada para manipular o clique. -->
+    </form>
+    
+    <h2>Itens Adicionados</h2> <!-- Subtítulo para a seção onde os itens adicionados serão exibidos. -->
+    <table id="itensTabela"> <!-- Tabela para exibir os itens adicionados com um ID único para referência no JavaScript. -->
+        <thead>
+            <tr>
+                <th>Descrição</th> <!-- Cabeçalho da coluna para a descrição do item. -->
+                <th>Categoria</th> <!-- Cabeçalho da coluna para a categoria do item. -->
+                <th>Valor</th> <!-- Cabeçalho da coluna para o valor do item. -->
+                <th>Quantidade/Peso</th> <!-- Cabeçalho da coluna para a quantidade ou peso do item. -->
+                <th>Excluir</th> <!-- Cabeçalho da coluna para o botão de exclusão do item. -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Itens serão adicionados aqui -->
+        </tbody>
+    </table>
+    
+    <button onclick="limparLista()">Limpar Lista</button> <!-- Botão para limpar todos os itens da lista, com uma função JavaScript associada para manipular o clique. -->
+    
+    <h2>Total Geral</h2> <!-- Subtítulo para a seção que exibe o total geral dos itens. -->
+    <p id="totalGeral">R$ 0.00</p> <!-- Parágrafo para exibir o total geral formatado como moeda. -->
+    
+    <script src="js/calculadora.js"></script> <!-- Link para o arquivo JavaScript que contém as funções para adicionar itens, limpar a lista e calcular o total. -->
+
+</section>
+<!-- FIM CONTEÚDO DO SITE -->
+
+<footer>
+    <!-- O footer não precisa ter heading -->
+    Paulista/PE <!-- Texto de rodapé com a localização da loja ou informação de contato. -->
+</footer>
+</body>
+</html>

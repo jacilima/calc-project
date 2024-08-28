@@ -1,0 +1,185 @@
+.menu a.active {
+    background: #4a8506; /* Destaca o item do menu ativo com um fundo verde escuro */
+}
+
+section {
+    margin: 60px auto; /* Centraliza a seção com uma margem superior/inferior */
+    background: #ffffff; /* Define um fundo branco */
+    width: 588px; /* Largura fixa para a seção */
+    min-height: 300px; /* Garante uma altura mínima */
+    border: 2px solid #4a8506; /* Adiciona uma borda verde */
+    border-radius: 8px; /* Arredonda os cantos */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    padding: 8px; /* Adiciona padding dentro da seção */
+}
+}
+
+/* Ajuste do conteúdo para o menu fixo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 60px 20px 20px; /* Adiciona margem superior para o menu fixo */
+}
+
+/* Estiliza inputs e selects */
+input, select {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 1px solid #ddd; /* Borda padrão */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    transition: border-color 0.3s, background-color 0.3s; /* Transição suave */
+}
+
+input:hover, select:hover {
+    border-color: #4a8506; /* Muda a cor da borda para verde ao passar o mouse */
+    background-color: #f0f9f0; /* Cor de fundo clara ao passar o mouse */
+}
+
+/* Estilos das mensagens de erro */
+.error {
+    color: #e74c3c; /* Vermelho para mensagens de erro */
+    font-size: 0.875em;
+    display: none; /* Inicialmente escondido */
+}
+
+/* Estilos do botão */
+button {
+    padding: 10px;
+    background-color: #4CAF50; /* Fundo verde para os botões */
+    color: white; /* Cor do texto branca */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+button:hover {
+    background-color: #4a8506; /* Verde mais escuro ao passar o mouse sobre o botão */
+}
+
+/* Estilos gerais do formulário */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
+
+/* Outras estilizações adicionais */
+section {
+    margin: 60px auto; /* Centraliza a seção com uma margem superior/inferior */
+    background: #ffffff; /* Define um fundo branco */
+    width: 588px; /* Largura fixa para a seção */
+    min-height: 300px; /* Garante uma altura mínima */
+    border: 2px solid #4a8506; /* Adiciona uma borda verde */
+    border-radius: 8px; /* Arredonda os cantos */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    padding: 8px; /* Adiciona padding dentro da seção */
+}
+
+.miniaturas img {
+    width: 110px; /* Define uma largura fixa para as imagens */
+    border: 1px solid #4a8506; /* Adiciona uma borda verde às imagens */
+    border-radius: 4px; /* Arredonda levemente os cantos das imagens */
+    transition: transform 0.5s; /* Transição suave para transformações */
+}
+
+.miniaturas img:hover {
+    transform: scale(1.1) rotate(5deg); /* Escala e rota a imagem ao passar o mouse */
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+}
+
+.produto {
+    border: 1px solid #ccc; /* Borda cinza claro ao redor dos produtos */
+    padding: 10px; /* Adiciona padding dentro dos contêineres de produtos */
+    margin: 10px; /* Margem entre os contêineres de produtos */
+    border-radius: 5px; /* Arredonda os cantos dos contêineres de produtos */
+    background-color: #fff; /* Define a cor de fundo como branca */
+}
+
+.produto h2 {
+    font-size: 20px; /* Define o tamanho da fonte para os títulos dos produtos */
+    color: #333; /* Cor do texto cinza escuro */
+}
+
+button {
+    background-color: #4CAF50; /* Fundo verde para os botões */
+    color: white; /* Cor do texto branca */
+    border: none; /* Sem borda */
+    padding: 10px; /* Padding dentro dos botões */
+    cursor: pointer; /* Muda o cursor para pointer ao passar o mouse */
+    border-radius: 5px; /* Arredonda os cantos dos botões */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+button:hover {
+    background-color: #4a8506; /* Verde mais escuro ao passar o mouse sobre o botão */
+}
+
+.form-container {
+    margin-top: 20px; /* Margem superior para espaçamento */
+    padding: 20px; /* Padding dentro dos contêineres de formulário */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 5px; /* Arredonda os cantos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+h1 {
+    text-align: center; /* Centraliza os títulos principais */
+    color: #4CAF50; /* Cor do texto verde */
+}

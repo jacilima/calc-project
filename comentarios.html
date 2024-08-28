@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML5. Garante que o navegador renderize a página no modo mais moderno e correto. -->
+<html lang="pt"> <!-- Define o idioma da página como português, ajudando na acessibilidade e SEO. -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres da página como UTF-8, garantindo que caracteres especiais sejam exibidos corretamente. -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Instrução para o Internet Explorer renderizar a página no modo de compatibilidade mais recente. -->
+    <title>Calculadora de Mercado</title> <!-- Define o título da página, que aparece na aba do navegador. -->
+    <link rel="stylesheet" href="css/mercado.css"> <!-- Link para o arquivo de estilo CSS principal, que estiliza a página como um todo. -->
+    <link rel="stylesheet" href="css/comentarios.css"> <!-- Link para o arquivo de estilo CSS específico para a página de feedbacks. -->
+</head>
+<body>
+<header>
+    <div class="container"> <!-- Contêiner para agrupar e organizar os elementos do cabeçalho. -->
+        <img src="img/logo-mercado-2.png" alt="Logo Pet"> <!-- Imagem do logotipo do pet shop com um texto alternativo para acessibilidade. -->
+        <br><br><h1>Calculadora de Mercado</h1> <!-- Título da loja, que pode precisar ser ajustado para refletir o nome correto (Pet Shop). -->
+        <nav class="menu"> <!-- Menu de navegação com links para diferentes páginas do site. -->
+            <a href="index.html">HOME</a> <!-- Link para a página inicial. -->
+            <a href="calculadora.html">CALCULADORA</a> <!-- Link para a página da calculadora. -->
+            <a class="active" href="comentarios.html">FEEDBACKS</a> <!-- Link para a página de feedbacks, com a classe 'active' indicando que é a página atual. -->
+        </nav>
+    </div>
+</header>
+
+<!-- INÍCIO CONTEÚDO DO SITE -->
+<section> <!-- Seção para agrupar o conteúdo principal da página de feedbacks. -->
+    <h1>Página de Feedback</h1> <!-- Título da seção, indicando que a página é destinada ao feedback. -->
+    
+    <div class="feedback-form"> <!-- Contêiner para o formulário de feedback. -->
+        <label for="name">Nome:</label> <!-- Rótulo para o campo de entrada do nome. -->
+        <input type="text" id="name" required> <!-- Campo de entrada de texto para o nome do usuário, marcado como obrigatório. -->
+        <span class="error" id="nameError">O nome é obrigatório.</span> <!-- Mensagem de erro exibida se o nome não for fornecido. -->
+        
+        <label for="email">E-mail:</label> <!-- Rótulo para o campo de entrada do e-mail. -->
+        <input type="email" id="email" required> <!-- Campo de entrada de e-mail para o endereço de e-mail do usuário, marcado como obrigatório e validado como e-mail. -->
+        <span class="error" id="emailError">O e-mail é obrigatório e deve ser um endereço válido.</span> <!-- Mensagem de erro exibida se o e-mail não for fornecido ou não for válido. -->
+        
+        <label for="comment">Comentário:</label> <!-- Rótulo para o campo de entrada do comentário. -->
+        <textarea id="comment" rows="5" required></textarea> <!-- Campo de entrada de texto multilinha para o comentário, marcado como obrigatório. -->
+        <span class="error" id="commentError">O comentário é obrigatório.</span> <!-- Mensagem de erro exibida se o comentário não for fornecido. -->
+        
+        <button type="button" onclick="submitFeedback()">Enviar Comentário</button> <!-- Botão para enviar o comentário, com uma função JavaScript associada para manipular o clique. -->
+    </div>
+    
+    <div class="comments-list" id="commentsList"> <!-- Contêiner para listar os comentários adicionados, com um ID único para referência no JavaScript. -->
+        <h2>Comentários</h2> <!-- Subtítulo para a seção de comentários. -->
+        <!-- Comentários serão adicionados aqui -->
+    </div>
+    
+    <script src="js/comentarios.js"></script> <!-- Link para o arquivo JavaScript que contém as funções para enviar e gerenciar comentários. -->
+  
+</section>
+<!-- FIM CONTEÚDO DO SITE -->
+<footer>
+    <!-- O footer não precisa ter heading -->
+    Paulista/PE <!-- Texto do rodapé com a localização, indicando onde o pet shop está situado. -->
+</footer>
+</body>
+</html>

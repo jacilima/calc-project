@@ -1,0 +1,124 @@
+/* Estilo para o link ativo no menu */
+.menu a.active {
+    background: #0066cc; /* Define a cor de fundo como azul para o item ativo no menu */
+}
+
+/* Estilos para a seção principal */
+section {
+    background: white; /* Define o fundo da seção como branco */
+    width: 620px; /* Define a largura da seção como 620 pixels */
+    margin: 80px auto; /* Adiciona uma margem superior de 80 pixels e centraliza horizontalmente com margens automáticas nas laterais */
+    min-height: 150px; /* Garante uma altura mínima de 150 pixels para a seção */
+    padding: 12px; /* Adiciona um padding de 12 pixels dentro da seção */
+}
+
+/* Estilo para iframes dentro da seção */
+section iframe {
+    float: left; /* Faz o iframe flutuar à esquerda, permitindo que outros elementos o contornem e alinhem corretamente */
+}
+
+/* Estilos para o título principal */
+h1 {
+    text-align: center; /* Centraliza o texto do título principal */
+    color: #0066cc; /* Define a cor do texto como azul */
+}
+
+/* Estilos para o formulário de feedback */
+.feedback-form {
+    max-width: 600px; /* Define uma largura máxima de 600 pixels para o formulário */
+    margin: 0 auto; /* Centraliza horizontalmente o formulário com margens automáticas */
+    padding: 20px; /* Adiciona um padding de 20 pixels dentro do formulário */
+    background: #fff; /* Define o fundo do formulário como branco */
+    border-radius: 8px; /* Arredonda os cantos do formulário com um raio de 8 pixels */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao formulário */
+}
+
+/* Estilos para os rótulos no formulário de feedback */
+.feedback-form label {
+    display: block; /* Faz com que cada rótulo ocupe uma linha completa */
+    margin-bottom: 10px; /* Adiciona uma margem inferior de 10 pixels para espaçamento entre rótulos e campos */
+}
+
+/* Estilos para campos de entrada e textarea no formulário de feedback */
+.feedback-form input, 
+.feedback-form textarea {
+    width: 100%; /* Define a largura dos campos como 100% do contêiner pai */
+    padding: 10px; /* Adiciona um padding de 10 pixels dentro dos campos */
+    border-radius: 5px; /* Arredonda os cantos dos campos com um raio de 5 pixels */
+    border: 1px solid #ddd; /* Define uma borda cinza clara padrão */
+    box-sizing: border-box; /* Inclui padding e border na largura total do elemento */
+    margin-bottom: 15px; /* Adiciona uma margem inferior de 15 pixels para espaçamento entre campos */
+}
+
+/* Estilos para campos de entrada e textarea quando estão em foco */
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border-color: #0066cc; /* Muda a cor da borda para azul quando o campo está em foco */
+    outline: none; /* Remove o contorno padrão ao redor do campo em foco */
+}
+
+/* Estilos para o botão no formulário de feedback */
+.feedback-form button {
+    background-color: #0066cc; /* Define o fundo do botão como azul */
+    color: white; /* Define a cor do texto como branca */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px; /* Adiciona um padding de 10 pixels dentro do botão */
+    cursor: pointer; /* Muda o cursor para um ponteiro ao passar o mouse sobre o botão */
+    border-radius: 5px; /* Arredonda os cantos do botão com um raio de 5 pixels */
+    width: 100%; /* Define a largura do botão como 100% do contêiner pai */
+    transition: background-color 0.3s; /* Transição suave para mudanças na cor do fundo */
+}
+
+/* Estilo para o botão ao passar o mouse */
+.feedback-form button:hover {
+    background-color: #0066cc; /* Mantém a mesma cor de fundo azul ao passar o mouse */
+}
+
+/* Estilos para a lista de comentários */
+.comments-list {
+    max-width: 600px; /* Define uma largura máxima de 600 pixels para a lista de comentários */
+    margin: 20px auto; /* Adiciona uma margem superior e inferior de 20 pixels e centraliza horizontalmente */
+    padding: 10px; /* Adiciona um padding de 10 pixels dentro da lista de comentários */
+    background: #fff; /* Define o fundo da lista de comentários como branco */
+    border-radius: 8px; /* Arredonda os cantos da lista de comentários com um raio de 8 pixels */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil à lista de comentários */
+}
+
+/* Estilos para o título dentro da lista de comentários */
+.comments-list h2 {
+    margin-top: 0; /* Remove a margem superior do título */
+}
+
+/* Estilos para cada comentário */
+.comment {
+    border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior cinza clara aos comentários */
+    padding: 10px 0; /* Adiciona um padding de 10 pixels superior e inferior aos comentários */
+}
+
+/* Remove a borda inferior do último comentário */
+.comment:last-child {
+    border-bottom: none; /* Remove a borda inferior do último comentário */
+}
+
+/* Estilos para o parágrafo dentro de cada comentário */
+.comment p {
+    margin: 5px 0; /* Adiciona uma margem de 5 pixels superior e inferior aos parágrafos dos comentários */
+}
+
+/* Estilos para o nome dentro de cada comentário */
+.comment .name {
+    font-weight: bold; /* Define o texto como negrito */
+    color: #333; /* Define a cor do texto como cinza escuro */
+}
+
+/* Estilos para o texto do comentário */
+.comment .text {
+    color: #555; /* Define a cor do texto como cinza claro */
+}
+
+/* Estilos para mensagens de erro */
+.error {
+    color: red; /* Define a cor do texto das mensagens de erro como vermelha */
+    font-size: 0.875em; /* Define o tamanho da fonte para 0.875em */
+    display: none; /* Inicialmente esconde as mensagens de erro */
+}
